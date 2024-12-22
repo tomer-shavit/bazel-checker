@@ -1,0 +1,21 @@
+name: Check BUILD.bazel File
+
+on:
+  pull_request:
+    paths:
+      - "**/BUILD.bazel"
+
+jobs:
+  check-bazel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Scala
+        uses: coursier/setup-action@v1
+        with:
+          java-version: "17"
+
+      - name: Run Bazel Checks
+        run: sbt run

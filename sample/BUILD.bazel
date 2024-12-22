@@ -1,0 +1,7 @@
+deps = [
+    "//lib:example",
+]
+
+specs = [
+    "//specs:example",
+]
