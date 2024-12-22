@@ -1,6 +1,8 @@
 deps = [
     "//lib:example",
+    "//lib:new-example",  # Added this
 ]
+
 
 specs = [
     "//specs:example",
